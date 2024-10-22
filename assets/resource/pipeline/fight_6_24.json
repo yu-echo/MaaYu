@@ -110,7 +110,6 @@
         "expected": "小铜",
         "action": "Click",
         "pre_wait_freezes": 700,
-        "post_wait_freezes": 200,
         "next": [
             "再次点击小铜匣"
         ]
@@ -125,7 +124,6 @@
         ],
         "expected": "小铜",
         "action": "Click",
-        "pre_wait_freezes": 200,
         "post_wait_freezes": 1000,
         "next": [
             "事件选择"

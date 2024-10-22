@@ -1,4 +1,7 @@
 {
+    "version": "0.1",
+    "message": "目前只有自动刷6-24的功能，请手动将页面切换到第六章，并确保6-24在屏幕中，然后启动脚本。",
+    
     "controller": [
         {
             "name": "安卓端",
@@ -19,19 +22,12 @@
             "path": [
                 "{PROJECT_DIR}/resource"
             ]
-        },
-        {
-            "name": "B 服",
-            "path": [
-                "{PROJECT_DIR}/resource",
-                "{PROJECT_DIR}/resource_bilibili"
-            ]
         }
     ],
     "task": [
         {
-            "name": "普通任务",
-            "entry": "MyTask1"
+            "name": "自动刷6-24",
+            "entry": "进入6-24"
         },
         {
             "name": "选项任务",
@@ -50,25 +46,6 @@
         }
     ],
     "option": {
-        "任务选项1": {
-            "cases": [
-                {
-                    "name": "文本1",
-                    "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本1"
-                        }
-                    }
-                },
-                {
-                    "name": "文本2",
-                    "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本2"
-                        }
-                    }
-                }
-            ]
-        }
+
     }
 }

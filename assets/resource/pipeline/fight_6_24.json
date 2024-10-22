@@ -1,0 +1,161 @@
+{
+    "战斗6-24": {
+        "next": [
+            "开始行动"
+        ]
+    },
+    "开始行动": {
+        "pre_wait_freezes": 500,
+        "recognition": "OCR",
+        "expected": "郊外",
+        "action": "Click",
+        "next": [
+            "事件选择"
+        ]
+    },
+    
+
+    "事件选择": {
+        "pre_wait_freezes": 500,
+        "next": [
+            "离开6-24",
+            "点击流寇",
+            "点击前进"
+        ]
+    },
+    "点击流寇": {
+        "recognition": "OCR",
+        "roi": [
+            0,
+            500,
+            800,
+            300
+        ],
+        "expected": "流寇",
+        "action": "Click",
+        "pre_wait_freezes": 500,
+        "next": [
+            "开始战斗"
+        ]
+    },
+    "点击前进": {
+        "recognition": "OCR",
+        "roi": [
+            0,
+            500,
+            800,
+            300
+        ],
+        "expected": "前进",
+        "action": "Click",    
+        "pre_wait_freezes": 500,
+        "next": [
+            "事件选择"
+        ]
+    },  
+    "开始战斗": {
+        "recognition": "OCR",
+        "expected": "开始战斗",
+        "action": "Click",
+        "next": [
+            "战斗中"
+        ],
+        "pre_wait_freezes": 500
+    },
+    "战斗中": {
+        "post_delay": 3000,
+        "next": [
+            "战斗结束",
+            "战斗中2"
+        ]        
+    },
+    "战斗中2": {
+        "post_delay": 3000,
+        "next": [
+            "战斗结束",
+            "战斗中"
+        ]        
+    },
+    "战斗失败": {
+        "recognition": "OCR",
+        "expected": "再次挑战",
+        "action": "Click",
+        "pre_wait_freezes": 1500,
+        "next": [
+            "战斗中"
+        ]
+    },    
+
+    "战斗结束": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click",
+        "pre_wait_freezes": 1500,
+        "post_wait_freezes": 1000,
+        "next": [
+            "点击小铜匣"
+        ],
+        "on_error": [
+            "点击流寇"
+        ]
+    },
+    "点击小铜匣": {
+        "recognition": "OCR",
+        "roi": [
+            0,
+            500,
+            800,
+            300
+        ],
+        "expected": "小铜",
+        "action": "Click",
+        "pre_wait_freezes": 700,
+        "post_wait_freezes": 200,
+        "next": [
+            "再次点击小铜匣"
+        ]
+    },
+    "再次点击小铜匣": {
+        "recognition": "OCR",
+        "roi": [
+            0,
+            500,
+            800,
+            300
+        ],
+        "expected": "小铜",
+        "action": "Click",
+        "pre_wait_freezes": 200,
+        "post_wait_freezes": 1000,
+        "next": [
+            "事件选择"
+        ],
+        "on_error": [
+            "点击流寇"
+        ]
+    },
+    
+    "离开6-24":{
+        "recognition": "OCR",
+        "roi": [
+            0,
+            500,
+            800,
+            300
+        ],
+        "expected": "郊外",
+        "action": "Click",
+        "next": [
+            "行动结束"
+        ]
+    },
+    "行动结束": {
+        "recognition": "OCR",
+        "expected": "点击空白处关闭",
+        "action": "Click",
+        "next": [
+            "进入6-24"
+        ]
+    }
+    
+}

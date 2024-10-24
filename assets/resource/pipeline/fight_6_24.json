@@ -20,7 +20,8 @@
         "next": [
             "离开6-24",
             "点击流寇",
-            "点击前进"
+            "点击前进",
+            "点击小铜匣"
         ]
     },
     "点击流寇": {
@@ -93,7 +94,8 @@
         "pre_wait_freezes": 1500,
         "post_wait_freezes": 1000,
         "next": [
-            "点击小铜匣"
+            "点击小铜匣",
+            "点击空白处关闭"
         ],
         "on_error": [
             "点击流寇"
@@ -110,8 +112,9 @@
         "expected": "小铜",
         "action": "Click",
         "pre_wait_freezes": 700,
+        "post_delay": 2000,
         "next": [
-            "再次点击小铜匣"
+            "检测战利品"
         ]
     },
     "再次点击小铜匣": {
@@ -124,12 +127,30 @@
         ],
         "expected": "小铜",
         "action": "Click",
-        "post_wait_freezes": 1000,
+        "post_delay": 2000,
         "next": [
             "事件选择"
         ],
         "on_error": [
             "点击流寇"
+        ]
+    },
+    "检测战利品": {
+        "recognition": "OCR",
+        "roi": [
+            270,
+            560,
+            250,
+            60
+        ],
+        "expected": "获得",
+        "post_delay": 1000,
+        "inverse": true,
+        "next": [
+            "事件选择"
+        ],
+        "on_error": [
+            "检测战利品"
         ]
     },
     

@@ -14,7 +14,8 @@
     },
     "检测体力回复框": {
         "recognition": "OCR",
-        "expected": "体力回复"
+        "expected": "体力回复",
+        "action": "StopTask"
     },
     "进入关卡": {
         "recognition": "OCR",

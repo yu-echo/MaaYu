@@ -165,7 +165,23 @@
         "action": "Click",
         "next": [
             "进入6-24"
+        ],
+        "on_error":["行动结束1"]
+    },
+    "行动结束1": {
+        "recognition": "OCR",
+        "expected": "五铢钱",
+        "target_offset": [
+            0,
+            300,
+            0,
+            0
+        ],
+        "action": "Click",
+        "next": [
+            "进入6-24"
         ]
     }
+
     
 }

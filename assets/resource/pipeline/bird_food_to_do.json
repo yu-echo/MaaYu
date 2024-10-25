@@ -39,7 +39,7 @@
         "pre_wait_freezes": 500,
         "recognition": "OCR",
         "roi" : [268,1062,185,71],
-        "expected":"点击空白处关闭",
+        "expected":"点击空白",
         "action": "Click",
         "next":["识别可做任务"],
         "post_wait_freezes":800

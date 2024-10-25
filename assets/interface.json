@@ -1,9 +1,10 @@
 {
     "name": "MaaYuan", 
-    "version":  "0.1", 
+    "version":  "0.2.3", 
+    "url":  "https://github.com/mlango/MaaYuan",
     "custom_title": "MAA鸢", 
     "default_controller": "adb",
-    
+    "lock_controller":true,
     "controller": [
         {
             "name": "安卓端",
@@ -27,6 +28,12 @@
         }
     ],
     "task": [
+        {
+            "name": "启动游戏-如鸢",
+            "entry": "启动游戏",
+            "checked": true,
+            "doc": "启动国服小号鸢，这个包名是taptap下载的，如启动不了可能是下载来源不同"
+        },
         {
             "name": "进入6-24",
             "entry": "进入6-24",
